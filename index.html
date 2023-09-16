@@ -1,81 +1,355 @@
 <!DOCTYPE HTML>
-
 <!--
 	Spectral by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
+	<head>
+		<title>Ahmed Adamjee</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" /> -->
+	</head>
+	<body class="landing is-preload">
 
-<head>
-	<title>Ahmed Adamjee</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" /> -->
-</head>
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
 
-<body class="landing is-preload">
-<!-- Page Wrapper -->
-<div id="page-wrapper">
+				<!-- Header -->
+					<header id="header" class="alt">
+						<h1><a href="index.html">Ahmed Adamjee</a></h1>
+						<nav id="nav">
+							<ul>
+								<li class="special">
+									<a href="#menu" class="menuToggle"><span>Menu</span></a>
+									<div id="menu">
+										<ul>
+											<li><a href="#banner" class="more scrolly">Home</a></li>
+											<li><a href="#projects" class="more scrolly">Projects</a></li>
+											<li><a href="#about" class="more scrolly">About</a></li>
+											<li><a href="#contact" class="more scrolly">Contact</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<h2>Ahmed Adamjee</h2>
+							<p>
+								MSc Robotics and Computation - University College London <br style="display: block;"/>
+								BEng Mechatronics and Robotics (Industrial) - University of Leeds <br style="display: block;"/>
+								<ul class="icons">
+									<li><a href="https://github.com/ahmedadamji " target="blank" class="icon brands fa-github fa-2x"><span class="label">GitHub</span></a></li>
+									<li><a href="https://www.linkedin.com/in/ahmedadamjee/" target="blank" class="icon brands fa-linkedin fa-2x"><span class="label">LinkedIn</span></a></li>
+									<li><a href="mailto:adamjiahmed@gmail.com" target="_top" target="blank" class="icon solid fa-envelope fa-2x"><span class="label">Email</span></a></li>
+								</ul>
+							</p>
+						</div>
+						<a href="#projects" class="more scrolly">Projects</a>
+					</section>
+
+				<!-- projects -->
+				<section id="projects" class="wrapper alt style2 special">
+					<section class="spotlight" style="display: flex; justify-content: center;">
+						<div class="content">
+							<h2>Motion Planner for an Autonomous Vehicle</h2>
+							<p>
+								<!-- This project was part of my Self Driving Cars Specialization by the University of Toronto. -->
+								In this project, I built a comprehensive motion planning stack for autonomous navigation, tested with the CARLA simulator, capable of avoiding static and dynamic obstacles, tracking lane center, and obeying stop signs. This involved creating a behavioral planning logic that incorporated a state machine to handle transitions between different road situations.
+								Path generation was also a crucial aspect of this project, where I employed advanced mathematical techniques to generate spiral paths. This process included computing the goal state set and optimizing the path for vehicle directionality.
+								To ensure safety, I devised a circle-based static collision checking mechanism that would alert the system of any potential static obstacles. This was further complemented by a path selection process that evaluated paths based on their tracking to the global path's centerline and distance from obstacles.
+								The final piece of this project involved developing a velocity profile that governed the vehicle's speed according to different road scenarios and traffic rules.
+								The implementation and success of this project showcased my ability to develop complex algorithms and effectively use software development tools. I am excited to continue pushing my skills to tackle more intricate challenges in the future.
+							</p>
+						</div>
+						<div class="image">
+							<img src="images/project_imgs/Motion_Planner_for_an_Autonomous_Vehicle.gif" alt="Motion Planner for an Autonomous Vehicle" height="350"/>
+						</div>
+					</section>
+					<section class="spotlight" style="display: flex; justify-content: center;">
+						<div class="content">
+							<h2>Multi Agent Tennis Using MADDPG</h2>
+							<p>
+								<!-- This project was part of my Deep Reinforcement Learning Nanodegree at Udacity. -->
+								In this project, I developed a collaboration and competition algorithm to train agents in the Tennis environment. This environment involves two agents controlling rackets to keep a ball in play, with rewards given for hitting the ball over the net and penalties given for letting it hit the ground or go out of bounds.
+								To achieve optimal results, I analyzed the data and developed an algorithm that allowed the agents to work collaboratively while competing against each other. I was able to create an efficient and effective algorithm that allowed the agents to achieve high scores by keeping the ball in play for extended periods.
+								Throughout the project, I closely monitored the performance of the algorithm and made necessary adjustments. The goal was to achieve an average score of +0.5 over 100 consecutive episodes, and I was successful in achieving this result.
+								This project allowed me to showcase my abilities as a software developer and demonstrate my ability to create effective algorithms for even the most complex environments. I am excited to tackle similar challenges in the future and continue pushing the boundaries of advanced software development.
+							</p>
+						</div>
+						<div class="image">
+							<img src="images/project_imgs/DRLNDCollaborationAndCompetition.gif" alt="Multi Agent Tennis Using MADDPG" height="350"/>
+						</div>
+					</section>
+					<section class="spotlight" style="display: flex; justify-content: center;">
+						<div class="content">
+							<h2>Continuous Control Using DDPG</h2>
+							<p>
+								<!-- This project was part of my Deep Reinforcement Learning Nanodegree at Udacity. -->
+								In this project, I developed a continuous control algorithm to train an agent to maintain its position at target locations for as many time steps as possible in the Reacher environment. This environment consists of a double-jointed arm that moves to target locations, and the agent receives a reward for every step its hand is in the goal location.
+								To achieve optimal results, I used distributed training with the second version of the Reacher environment that includes 20 identical agents. I developed a set of actions for the agent, consisting of a vector with four numbers corresponding to torque applicable to two joints. These actions were carefully calibrated to ensure precise movements within the environment.
+								Throughout the project, I monitored the performance of the algorithm and made necessary adjustments. By leveraging distributed training and precise calibration of actions, the agent was able to maintain its position at target locations for extended periods.
+								This project allowed me to showcase my abilities and further hone my skills. I am excited to tackle similar challenges in the future and continue pushing the boundaries of advanced software development.
+							</p>
+						</div>
+						<div class="image">
+							<img src="images/project_imgs/DRLNDContinuousControl.gif" alt="Continuous Control Using DDPG" height="350"/>
+						</div>
+					</section>
+					<section class="spotlight" style="display: flex; justify-content: center;">
+						<div class="content">
+							<h2>Navigation Using DQN</h2>
+							<p>
+								<!-- This project was part of my Deep Reinforcement Learning Nanodegree at Udacity. -->
+								In this project, I undertook the development of a sophisticated navigation algorithm, aimed at training an agent to navigate and collect bananas in a complex, square environment. 
+								With a clear understanding of the agent's objectives, I worked to develop a set of four discrete actions, including moving forward, moving backward, turning left, and turning right. Through diligent experimentation and fine-tuning of these actions, I was able to create an algorithm that allowed the agent to navigate the environment with ease, collecting yellow bananas while avoiding blue ones.
+								Throughout the project, I paid close attention to the performance of the algorithm, making adjustments as necessary in order to achieve optimal results. The task was episodic in nature, with the agent required to maintain an average score of +13 over 100 consecutive episodes in order to successfully solve the environment.
+								This project was an excellent opportunity to showcase my skills as a software developer, highlighting my ability to create sophisticated algorithms that achieve optimal results in complex environments. I look forward to tackling similar challenges in the future, continuing to push the boundaries of what is possible with advanced software development techniques.
+							</p>
+						</div>
+						<div class="image">
+							<img src="images/project_imgs/DRLNDNavigation.gif" alt="Navigation Using DQN" height="350"/>
+						</div>
+					</section>
+					<section class="spotlight" style="display: flex; justify-content: center;">
+						<div class="content">
+							<h2>Study of Point Features’ Selection Criteria for Efficient Outdoor SLAM</h2>
+							<p>
+								This project was the result of my MSc Thesis at UCL.
+								In this project, I developed a novel feature selection strategy for SLAM algorithms that examines low-level physical and geometric characteristics of features for selection.
+								The objective was to create an algorithm for selecting a subset of observed features based on physical and geometrical merits that could adapt to sudden environmental changes using "Smart-Parameters."
+
+								The proposed selection criteria were implemented within a state-of-the-art SLAM algorithm and evaluated using specially designed metrics.
+								Results showed that using the proposed feature selection strategies, localization errors were no further than 1σ of the baseline performance, eliminating ≈ 76% of the features while building a sharper map with fewer overlapping walls, eliminating ≈ 55% features.
+
+								This project contributes to making state-of-the-art SLAM approaches more efficient and accurate, providing a new feature selection strategy that can be applied to various SLAM architectures with potential applications in industries such as autonomous vehicles and automated warehouse robots.
+							</p>
+						</div>
+						<div class="image">
+							<img src="images/project_imgs/Selection_Criteria.png" alt="Study of Point Features’ Selection Criteria for Efficient Outdoor SLAM" />
+						</div>
+					</section>
+					<section class="spotlight" style="display: flex; justify-content: center;">
+						<div class="content">
+							<h2>FixiT-VR</h2>
+							<p>
+								FixiT-VR is a 4-player game where players work together to fix broken parts of a Gameboy motherboard and assemble the parts to create a whole Gameboy.
+								To play, players join a Ubiq Room and assume the colours of the corner they are in. The objects to be fixed are randomly assigned colours and each player must replace faulty parts of the same colour as their corner. Neutral objects require collaboration from multiple players. Voice communication is used to call the attention of all players to pick up and dispose of such items. The environment is a square room with an artistic texture.
+								The snapping mechanism and physics of pickable objects are unique features of the game.
+								Our team worked together to design the game, with Ed and I developing the code for the game functionalities and Kennedy and Abdulbaasit outlining tasks and developing/importing game objects.
+							</p>
+						</div>
+						<div class="image">
+							<img src="images/project_imgs/fixit_vr_1.jpg" alt="FixiT-VR" />
+						</div>
+					</section>
+					<section class="spotlight" style="display: flex; justify-content: center;">
+						<div class="content">
+							<h2>RoboCup@Home 2021 Open Platform League</h2>
+							<p>
+								While working on my final year dissertation at the University of Leeds, I was part of the <a href="https://sensiblerobots.leeds.ac.uk/" target="blank">Sensible Robots</a> research group to develop service and assistive robot technology with high relevance for future applications, evaluated using benchmark tests in realistic, non-standardised settings.
+								As part of the research group's <a href="https://sensiblerobots.leeds.ac.uk/lasr/" target="blank"> Leeds Autonomous Service Robots</a> (LASR) team, I participated in the 2021 <a href="https://athome.robocup.org/rc2021/" target="blank">RoboCup@Home</a> Open Platform League, which is an international joint project to promote AI, robotics, and related fields. It is an attempt to foster AI and intelligent robotics research by providing standard problems where a wide range of technologies can be integrated and examined.
+								One of the challenges required to move objects spread around a room to their designated locations.
+								In another challenge, we were required to provide a person with something from a shelf to consume when requested, avoiding obstacles while navigating.
+								I worked towards tasks involving tidying up objects in the environment, depositing 5 items at their correct locations and providing a person with a requested item from a shelf while navigating avoiding small obstacles.
+							</p>
+						</div>
+						<div class="image">
+							<img src="images/project_imgs/robocup_team_picture.jpg" alt="RoboCup@Home 2021 Open Platform League" />
+						</div>
+					</section>
+					<section class="spotlight" style="display: flex; justify-content: center;">
+						<div class="content">
+							<h2>Pointing Based Object Recognition and Disambiguation for Autonomous Service Robots</h2>
+							<p>
+								This project was the result of my final year dissertation at the University of Leeds.
+								This project addresses the growing demand for domestic service robots that can assist humans in their daily lives, particularly in household tasks and monitoring people in need.
+								The ongoing demographic shift towards an aging population and the increased acceptance of service robots due to the COVID-19 pandemic have further motivated the need for seamless and intuitive Human-Robot Interaction (HRI).
+								This project combines various technologies, including Gesture Recognition, Computer Vision, Object Recognition, and Autonomous Navigation, to meet the objectives of competitions like RoboCup@Home and the goals of the Leeds Autonomous Service Robots (LASR) team.
+								The primary aims of this project are to develop a robotic system capable of identifying objects pointed at in a domestic setting and disambiguating between closely placed objects by asking appropriate questions based on their attributes.
+								The system should also be able to recognize and respond to multiple modes of human communication, such as speech and hand gestures.
+							</p>
+						</div>
+						<div class="image">
+							<img src="images/project_imgs/Pointing_Recognition_1.png" alt=" Pointing Based Object Recognition and Disambiguation for Autonomous Service Robots" />
+						</div>
+					</section>
+					<section class="spotlight" style="display: flex; justify-content: center;">
+						<div class="content">
+							<h2>SnakeVSBlock Game in C++</h2>
+							<p>
+								This game was developed duting my second year at the University of Leeds as part of the the Embedded Systems Project module.
+								This game was programmed using advanced C++ techniques and designed to run on a K64F board of ARM mbed.
+								This game features multiple programmed modes such as motion control and joystick, and includes custom-made sprites, sound, and animations.
+								The code has been optimized for efficient gameplay with purpose-driven architecture, using important coding practices such as Object-Oriented Programming, version control, debugging, and Doxygen for project documentation, all following a standard coding style.
+								In addition to these advanced C++ techniques, the game also employs iterative logic for choosing block numbers, adding an extra layer of complexity to the gameplay.
+								The highest resolution at high speeds and smooth animations, with reaction times above your critical flicker fusion frequency, make for an immersive gaming experience.
+								The game also provides the ability to control your gameplay with your preferred method, and stabilizes unwanted movement, helping to develop focus and precision.
+							</p>
+						</div>
+						<div class="image">
+							<img src="images/project_imgs/SvsB_1.png" alt="SnakeVSBlock Game in C++" />
+						</div>
+					</section>
+
+				</section>
 
 
-<!-- Header -->
-<header id="header" class="alt">
-	<h1><a href="index.html">Ahmed Adamjee</a></h1>
-	<nav id="nav">
-		<ul>
-			<li class="special">
-				<a href="#menu" class="menuToggle"><span>Menu</span></a>
-				<div id="menu">
-					<ul>
-						<li><a href="#banner" class="more scrolly">Home</a></li>
-						<li><a href="#projects" class="more scrolly">Projects</a></li>
-						<li><a href="#about" class="more scrolly">About</a></li>
-						<li><a href="#contact" class="more scrolly">Contact</a></li>
-					</ul>
-				</div>
-			</li>
-		</ul>
-	</nav>
-</header>
+				<!-- about -->
+				<section id="about" class="wrapper style3 special">
+					<div class="inner">
+						<div class="row">
+							<div class="col-12">
+								<header class="major">
+									<h2>About</h2>
+									<p>
+										I'm a roboticist and AI enthusiast who loves bringing ideas to life. I hold an MSc in Robotics and Computation with Distinction from University College London (UCL) and a BEng in Mechatronics and Robotics (Industrial) with First Class Honours from the University of Leeds. I bring 3 years of hands-on experience in key areas such as SLAM, Sensing, Perception, Manipulation, Navigation, and Path Planning. My programming expertise lies in C++ and Python, which enables me to efficiently create and implement innovative solutions.
+										Throughout my educational journey, I've actively participated in prestigious international robotics competitions like RoboCup@Home, gaining invaluable hands-on experience. My year-long industry stint at BMW Group exposed me to a variety of AI and ML projects, where I applied my skills to tackle real-world challenges.
+										I am deeply interested in autonomous driving, reinforcement learning, and multi-agent AI. Presently, I'm working on cutting-edge localization, mapping, and perception solutions for autonomous driving applications in the port industry. I am also preparing a research paper on a ground-breaking feature selection strategy for SLAM, aimed at reducing computational complexity.
+										I welcome the opportunity to connect with like-minded individuals who share my enthusiasm for robotics and AI. Let's collaborate and work together to make a lasting impact on the world of technology!
+										Please feel free to reach out to me by providing your contact details in the form below.
+									</p>
+								</header>
+							</div>
+						</div>
+					</div>
+				</section>
 
-<!-- Banner -->
-<section id="banner"><iframe frameborder="0" height="100%" src="banner.html" width="100%"></iframe></section>
-<!-- projects -->
-<section class="wrapper alt style2 special" id="projects"><iframe frameborder="0" height="100%" src="projects.html" width="100%"></iframe></section>
-<!-- about -->
-<section class="wrapper style3 special" id="about"><iframe frameborder="0" height="100%" src="about.html" width="100%"></iframe></section>
-<!-- skills -->
-<section class="wrapper style1 special" id="skills"><iframe frameborder="0" height="100%" src="skills.html" width="100%"></iframe></section>
-<!-- contact -->
-<section class="wrapper style4 special" id="contact"><iframe frameborder="0" height="100%" src="contact.html" width="100%"></iframe></section>
+				<!-- skills -->
+				<section id="skills" class="wrapper style1 special">
+					<div class="inner">
+						<header class="major">
+							<h2>Skills</h2>
+						</header>
+						<div class="row">
+							<div class="col-4 col-6-medium">
+								<ul class="actions stacked">
+									<li>C / C++</li>
+									<li>Python</li>
+									<li>C#</li>
+									<li>MATLAB</li>
+									<li>ROS (Robot Operating System)</li>
+									<li>ROS2</li>
+									<li>SLAM</li>
+									<li>Localization</li>
+									<li>Motion Planning</li>
+									<li>OpenCV</li>
+									<li>PCL</li>
+									<li>PyTorch</li>
+									<li>TensorFlow</li>
+									<li>g2o</li>
+									<li>Ceres</li>
+									<li>SciPy</li>
+								</ul>
+							</div>
+							<div class="col-4 col-6-medium">
+								<ul class="actions stacked">
+									<li>Kalman Filters</li>
+									<li>Particle Filters</li>
+									<li>Graph SLAM</li>
+									<li>ORB-SLAM2</li>
+									<li>BFS</li>
+									<li>DFS</li>
+									<li>Dijkstra</li>
+									<li>A*</li>
+									<li>Bidirectional A*</li>
+									<li>ARA*</li>
+									<li>D*</li>
+									<li>RRT</li>
+									<li>RRT*</li>
+									<li>Trajectory Optimization</li>
+									<li>MPC</li>
+									<li>PID</li>
+								</ul>
+							</div>
+							<div class="col-4 col-6-medium">
+								<ul class="actions stacked">
+									<li>LQR</li>
+									<li>Vehicle Kinematics and Dynamics</li>
+									<li>Gazebo</li>
+									<li>CARLA</li>
+									<li>Unity</li>
+									<li>OpenAI Gym</li>
+									<li>Simulink</li>
+									<li>LabVIEW</li>
+									<li>Unreal Engine</li>
+									<li>Solidworks</li>
+									<li>Supervised Learning</li>
+									<li>Reinforcement Learning</li>
+									<li>CNNs</li>
+									<li>Scikit-Learn</li>
+									<li>NumPy</li>
+									<li>Pandas</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
 
-<!-- Footer -->
-<footer id="footer">
-	<ul class="icons">
-		<li><a href="https://github.com/ahmedadamji" target="blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-		<li><a href="https://www.linkedin.com/in/ahmedadamjee/" target="blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-		<li><a href="mailto:adamjiahmed@gmail.com@gmail.com" target="_top" target="blank" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-	</ul>
-	<ul class="copyright">
-		<li>&copy; 2022 Ahmed Adamjee</li>
-		<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-	</ul>
-</footer>
 
-</div>
+				<!-- contact -->
+					<section id ="contact" class="wrapper style4 special">
+						<div class="inner">
+							<header class="major">
+								<h2>Contact</h2>
+								<form method="POST" action="https://formspree.io/f/mqknwlgo">
+									<div class="row gtr-uniform">
+										<div class="col-6 col-12-xsmall">
+											<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name*" required/>
+										</div>
+										<div class="col-6 col-12-xsmall">
+											<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email*" required/>
+										</div>
+										<div>
+											<input type="checkbox" id="is-human" name="is-human" unchecked required>
+											<label for="is-human">Not a robot*</label>
+										</div>
+										<div class="col-12">
+											<textarea name="demo-message" id="demo-message" placeholder="Enter your message*" rows="6" required></textarea>
+										</div>
+										<div class="col-12">
+											<ul class="actions">
+												<li><input type="submit" value="Send Message" class="primary" /></li>
+												<li><input type="reset" value="Reset" /></li>
+											</ul>
+										</div>
+									</div>
+								</form>
+							</header>
+						</div>
+					</section>
 
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/jquery.scrolly.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="icons">
+							<li><a href="https://github.com/ahmedadamji" target="blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.linkedin.com/in/ahmedadamjee/" target="blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="mailto:adamjiahmed@gmail.com@gmail.com" target="_top" target="blank" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; 2022 Ahmed Adamjee</li>
+							<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</footer>
 
-</body>
+			</div>
 
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
